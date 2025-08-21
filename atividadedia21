@@ -1,0 +1,15 @@
+soma_positivos = 0
+contador_negativos = 0
+for i in range(20):
+    try:
+        numero = int(input(f"Digite o {i+1}º número inteiro: "))
+        if numero > 0:
+            soma_positivos += numero
+        elif numero < 0:
+            contador_negativos += 1
+            
+    except ValueError:
+        print("Entrada inválida. Por favor, digite um número inteiro.")
+        i -= 1
+print(f"\nA soma dos números positivos é: {soma_positivos}")
+print(f"A quantidade de valores negativos é: {contador_negativos}")
